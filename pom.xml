@@ -60,7 +60,7 @@
 		<dependency>
 			<groupId>com.ipacc.enterprise.elm</groupId>
 			<artifactId>elm-logging</artifactId>
-			<version>1.3.5-SNAPSHOT</version>
+			<version>1.3.6</version>
 		</dependency>
 <!--         <dependency>
             Eureka for service registration
@@ -129,6 +129,30 @@
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
+		</repository>
+		<repository>
+			<id>nexus general releases</id>
+			<name>General maven Repository - Infinity Releases</name>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<url>http://maven01.ipacc.com:8081/nexus/content/repositories/infinity-releases</url>
+		</repository>
+		<repository>
+			<id>nexus general</id>
+			<name>General maven Repository - Infinity Snapshots</name>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<url>http://maven01.ipacc.com:8081/nexus/content/repositories/infinity-snapshots</url>
 		</repository>
 	</repositories>
 	<pluginRepositories>
