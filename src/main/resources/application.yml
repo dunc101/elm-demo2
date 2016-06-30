@@ -1,0 +1,9 @@
+server:
+  port: 9018
+spring:
+  application:
+    name: elm-demo2
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8111/eureka/
