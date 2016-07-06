@@ -41,7 +41,9 @@ public class ElmDemo2Application {
 		    MultiValueMap<String, String> params = new LinkedMultiValueMap<String, String>();
 		    params.add("globalTransId", gtid);
 		    params.add("clientId", "elm-demo2");
-		    result = restTemplate.postForObject( "http://elm-demo3/endtrans", params, String.class);
+			String hostname = System.getenv("ELM_DEMO3_SERVICE_HOST");
+			String port = System.getenv("ELM_DEMO3_SERVICE_PORT");
+		    result = restTemplate.postForObject( "http://" + hostname + ":" + port + "/endtrans", params, String.class);
 			trans.setResolutionFlag(true);
 		} catch (Exception e) {
 			trans.setResolutionFlag(false);
